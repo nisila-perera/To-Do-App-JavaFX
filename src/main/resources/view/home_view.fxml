@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="497.0" prefWidth="710.0" style="-fx-background-color: black; -fx-border-radius: 50px;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeViewController">
+   <children>
+      <Label layoutX="25.0" layoutY="27.0" text="My To Do List" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="48.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="taskText" labelFloat="true" layoutX="23.0" layoutY="422.0" prefHeight="37.0" prefWidth="268.0" promptText="Add a task" style="-fx-background-color: white; -fx-border-radius: 25px; -fx-region-border: 1px;" unFocusColor="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </JFXTextField>
+      <Line endX="-21.0" endY="221.66665649414062" layoutX="398.0" layoutY="240.0" startX="-20.999969482421875" startY="-114.66666412353516" stroke="#747474" />
+      <JFXButton fx:id="addBtn" layoutX="301.0" layoutY="423.0" onAction="#btnAddOnAction" prefHeight="37.0" prefWidth="59.0" style="-fx-background-color: #db00ff;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="24.0" layoutY="132.0" prefHeight="37.0" prefWidth="83.0" text="To Do">
+         <font>
+            <Font name="Comic Sans MS Bold" size="26.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.13333334028720856" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8588235378265381" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <ScrollPane fx:id="myDayTasksPane" layoutX="389.0" layoutY="183.0" prefHeight="215.0" prefWidth="297.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+         </content>
+      </ScrollPane>
+      <ScrollPane fx:id="taskPane" layoutX="24.0" layoutY="183.0" prefHeight="215.0" prefWidth="337.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+        </content>
+      </ScrollPane>
+      <JFXButton fx:id="moveToMyDayBtn" layoutX="222.0" layoutY="130.0" onAction="#moveToMyDayOnAction" prefHeight="42.0" prefWidth="139.0" style="-fx-background-color: #db00ff;" text="Move to My Day" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="moveToDoBtn" layoutX="570.0" layoutY="130.0" onAction="#moveToToDoOnAction" prefHeight="42.0" prefWidth="115.0" style="-fx-background-color: #db00ff;" text="Move to ToDo" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="389.0" layoutY="132.0" prefHeight="37.0" prefWidth="115.0" text="My Day">
+         <font>
+            <Font name="Comic Sans MS Bold" size="26.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.13333334028720856" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8588235378265381" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <JFXTextField fx:id="searchTaskField" labelFloat="true" layoutX="389.0" layoutY="27.0" prefHeight="29.0" prefWidth="196.0" promptText="Search a task by name" style="-fx-background-color: white; -fx-border-radius: 25px; -fx-region-border: 1px;" unFocusColor="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="searchBtn" layoutX="594.0" layoutY="23.0" onAction="#searchOnAction" prefHeight="37.0" prefWidth="92.0" style="-fx-background-color: #db00ff;" text="Search" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="deleteBtn" layoutX="389.0" layoutY="422.0" onAction="#deleteOnAction" prefHeight="37.0" prefWidth="297.0" style="-fx-background-color: #db00ff;" text="Delete All My Day Tasks" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="loadBtn" layoutX="594.0" layoutY="65.0" onAction="#loadOnAction" prefHeight="37.0" prefWidth="92.0" style="-fx-background-color: #db00ff;" text="Load All" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
